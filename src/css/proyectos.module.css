@@ -1,0 +1,106 @@
+.container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: #121212;
+}
+
+.principalTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.cardGroup {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.cardGroup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(243, 242, 242, 0.2);
+}
+
+.cardImg {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+}
+
+.card {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+
+.cardBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: white;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.cardTech {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  font-weight: 500;
+  margin: 0;
+  font-style: normal;
+}
+
+.cardStatus {
+  font-size: 0.85rem;
+  color: #888888;
+  font-style: italic;
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.btn {
+  align-self: flex-start;
+  padding: 10px 24px;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}

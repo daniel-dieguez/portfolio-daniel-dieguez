@@ -1,0 +1,75 @@
+.principalTitle {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.principalButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 768px) {
+    .principalButtons {
+        max-width: 800px;
+       
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .principalButtons {
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    
+    .principalButtons p:last-child {
+        grid-column: 1 / -1;
+        
+        justify-self: center;
+        
+        max-width: 200px;
+       
+    }
+}
+
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 1px solid #555;
+    border-radius: 12px;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s ease;
+    font-size: 25px;
+    
+}
+
+.btn:hover {
+    background-color: #353535;
+    border-color: white;
+}
+
+
+.btn svg {
+    font-size: 68px;
+    min-height: 70px;
+}
