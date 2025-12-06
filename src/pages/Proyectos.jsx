@@ -5,7 +5,7 @@ import proyectos from '../data/proyectos'
 
 export default function Proyectos() {
     return (
-        <div >
+        <div className={style.projectsSection}>
             <h1 className={style.principalTitle}>Proyectos</h1>
 
             <div className={style.projectsGrid}>

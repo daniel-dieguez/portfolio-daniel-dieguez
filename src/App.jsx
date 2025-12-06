@@ -8,6 +8,7 @@ import Tecnologias from './pages/Tecnologias'
 import Proyectos from './pages/Proyectos'
 // import Navbar from './component/Navbar'
 // import ScrollTop from './component/ScrollTop'
+import Contact from './pages/Contact'
 
 export default function App() {
   return (
@@ -25,6 +26,9 @@ export default function App() {
         </div>
         <div className={style.section}>
           <Proyectos />
+        </div>
+        <div className={style.section}>
+          <Contact />
         </div>
       </main>
     </div>
