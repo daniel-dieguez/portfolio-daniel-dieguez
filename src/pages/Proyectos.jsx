@@ -6,7 +6,13 @@ import proyectos from '../data/proyectos'
 export default function Proyectos() {
     return (
         <div className={style.projectsSection}>
-            <h1 className={style.principalTitle}>Proyectos</h1>
+            <h1 className={style.principalTitle}>
+                Proyectos destacados
+            </h1>
+
+            <p className={style.principalSubtitle}>
+                Ideas convertidas en soluciones reales con impacto
+            </p>
 
             <div className={style.projectsGrid}>
                 {proyectos.map((proyecto) => (

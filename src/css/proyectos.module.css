@@ -8,11 +8,23 @@
 }
 
 .principalTitle {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 40px;
+  font-size: 3.2rem;
+  font-weight: 800;
   text-align: center;
-  color: white;
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg, #ffffff, #2b2f3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.principalSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #dbdbdb;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
 }
 
 .projectsGrid {
