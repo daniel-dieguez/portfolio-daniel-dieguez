@@ -8,7 +8,6 @@ export default function Principal() {
   return (
     
     <div>
-
       <h1 className={styles.principalTitle}>Daniel Dieguez</h1>
 
       <h2 className={styles.principalSubtitle}>Full Stack Developer</h2>
@@ -19,7 +18,6 @@ export default function Principal() {
       </p>
 
       <div className={styles.principalButtons}>
-        
         <a href="https://wa.me/50200000000" className={styles.btn}>
           <FaWhatsapp /> WhatsApp
         </a>
@@ -35,7 +33,6 @@ export default function Principal() {
         <a href="https://github.com/daniel-dieguez" className={styles.btn}>
           <FaGithub /> GitHub
         </a>
-
       </div>
     </div>
   )

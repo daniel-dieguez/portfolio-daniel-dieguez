@@ -29,42 +29,52 @@ export default function Contact() {
 
     return (
 
-        <div>
-            <h1 className={style.principalTitle}>Contáctame</h1>
+         
+    <div>
+      <h1 className={style.principalTitle}>Contáctame</h1>
 
-            <div >
-                <form className={style.formContainer} onSubmit={handleSubmit}>
-                    <label htmlFor="nombre">Nombre</label>
-                    <input
-                        id="nombre"
-                        type="text"
-                        placeholder="Tu nombre"
-                        value={nombre}
-                        onChange={(e) => setNombre(e.target.value)}
-                    />
-
-                    <label htmlFor="correo">Correo</label>
-                    <input
-                        id="correo"
-                        type="email"
-                        placeholder="Tu correo"
-                        value={correo}
-                        onChange={(e) => setCorreo(e.target.value)}
-                    />
-
-                    <label htmlFor="mensaje">Mensaje</label>
-                    <textarea
-                        id="mensaje"
-                        rows="8"
-                        placeholder="Escribe tu mensaje"
-                        value={mensaje}
-                        onChange={(e) => setMensaje(e.target.value)}
-                    />
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+      <form className={style.formContainer} onSubmit={handleSubmit}>
+        <div className={style.field}>
+          <label htmlFor="nombre">Nombre</label>
+          <input
+            id="nombre"
+            type="text"
+            placeholder="Tu nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            required
+          />
         </div>
+
+        <div className={style.field}>
+          <label htmlFor="correo">Correo</label>
+          <input
+            id="correo"
+            type="email"
+            placeholder="Tu correo"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className={style.field}>
+          <label htmlFor="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            rows="6"
+            placeholder="Escribe tu mensaje"
+            value={mensaje}
+            onChange={(e) => setMensaje(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className={style.submitBtn}>
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
 
 
     )
