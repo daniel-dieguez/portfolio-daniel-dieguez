@@ -6,31 +6,49 @@ import Principal from './pages/Principal'
 import SobreMi from './pages/SobreMi'
 import Tecnologias from './pages/Tecnologias'
 import Proyectos from './pages/Proyectos'
-// import Navbar from './component/Navbar'
+import Navbar from './component/Navbar'
 // import ScrollTop from './component/ScrollTop'
 import Contact from './pages/Contact'
+import Snowfall from 'react-snowfall';
 
 export default function App() {
   return (
     <div className={style.appContainer}>
-      {/* <Navbar /> */}
+      <Snowfall
+        snowflakeCount={120}
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          zIndex: 1,
+        }}
+      />
+      <div className={style.navbarFixed}>
+        <Navbar />
+      </div>
+      
       <main>
-        <div className={style.section}>
+        <div id="principal" className={style.section}>
           <Principal />
         </div>
-        <div className={style.section}>
+
+        <div id="sobreMi" className={style.section}>
           <SobreMi />
         </div>
-        <div className={style.section}>
+
+        <div id="tecnologias" className={style.section}>
           <Tecnologias />
         </div>
-        <div className={style.section}>
+
+        <div id="proyectos" className={style.section}>
           <Proyectos />
         </div>
-        <div className={style.section}>
+
+        <div id="contacto" className={style.section}>
           <Contact />
         </div>
       </main>
+
     </div>
   )
 }
