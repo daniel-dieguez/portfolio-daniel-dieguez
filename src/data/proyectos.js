@@ -56,6 +56,16 @@ const datos = [
         status: "1",
         avances: "Proyecto finalizado",
     },
+    {
+        id: 5,
+        tittle: 'PDF-MASTER',
+        description: 'Sistema que te ayuda a unificar, eliminar, dividir y convertir tus archivos PDF de manera rápida y sencilla.',
+        image: antigua,
+        technologies: ["Next.js", "Tailwind",  "SEO"],
+        demoUrl: "https://pdf-master-zeta.vercel.app/",
+        status: "1",
+        avances: "Proyecto finalizado",
+    },
 ];
 
 export default datos;
