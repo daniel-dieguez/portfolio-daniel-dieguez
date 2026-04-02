@@ -3,6 +3,7 @@ import cafeteria from '../img/CafeteriaWeb.png';
 import gimnasio from '../img/gymWeb.png';
 import apartamentos from '../img/Apartamentos.png';
 import antigua from '../img/AntiguaSolitions.png';
+import pdfMaster from '../img/pdf-master.png';
 
 
 const datos = [
@@ -60,7 +61,7 @@ const datos = [
         id: 5,
         tittle: 'PDF-MASTER',
         description: 'Sistema que te ayuda a unificar, eliminar, dividir y convertir tus archivos PDF de manera rápida y sencilla.',
-        image: antigua,
+        image: pdfMaster,
         technologies: ["Next.js", "Tailwind",  "SEO"],
         demoUrl: "https://pdf-master-zeta.vercel.app/",
         status: "1",
