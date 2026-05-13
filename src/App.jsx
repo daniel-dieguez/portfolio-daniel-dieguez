@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import style from './css/app.module.css'
 
@@ -6,12 +6,20 @@ import Principal from './pages/Principal'
 import SobreMi from './pages/SobreMi'
 import Tecnologias from './pages/Tecnologias'
 import Proyectos from './pages/Proyectos'
+import Experience from './pages/Experience'
+
+import Intro from './pages/Intro'
 import Navbar from './component/Navbar'
 // import ScrollTop from './component/ScrollTop'
 import Contact from './pages/Contact'
 import Snowfall from 'react-snowfall';
 
+
 export default function App() {
+
+
+  const [mostrarIntro, setMostrarIntro] = useState(true)
+
   return (
     <div className={style.appContainer}>
       <Snowfall
@@ -23,6 +31,10 @@ export default function App() {
           zIndex: 1,
         }}
       />
+
+{mostrarIntro && <Intro onFinish={() => setMostrarIntro(false)} />}
+
+
       <div className={style.navbarFixed}>
         <Navbar />
       </div>
@@ -34,6 +46,9 @@ export default function App() {
 
         <div id="sobreMi" className={style.section}>
           <SobreMi />
+        </div>
+        <div id="Experiencia" className={style.section}>
+          <Experience />
         </div>
 
         <div id="tecnologias" className={style.section}>

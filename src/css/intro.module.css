@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #060a12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.saliendo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.titulo {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  animation: aparecer 1s ease forwards;
+
+  /* Glow en los bordes del texto */
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 30px rgba(180, 210, 255, 0.6),
+    0 0 60px rgba(100, 170, 255, 0.35),
+    0 0 100px rgba(60, 130, 255, 0.15);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    letter-spacing: 0.3em;
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.08em;
+    filter: blur(0);
+  }
+}
