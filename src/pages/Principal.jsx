@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import {} from 'reactstrap'
 // import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import styles from '../css/principal.module.css';
 import cvEs from '../docs/DanielDieguezEs.pdf'
@@ -28,7 +29,7 @@ export default function Principal() {
       </p>
 
       <div className={styles.principalButtons}>
-        <a href="https://wa.link/qd9q8w" className={styles.btn}>
+        <a href="https://wa.link/qd9q8w" className={styles.btnwhats}>
           <FaWhatsapp /> Contactame
         </a>
 
@@ -47,12 +48,16 @@ export default function Principal() {
           <FaGithub /> GitHub
         </a>
 
-        <div style={{ marginTop: '10px' }}>
-        <button className={styles.btn} onClick={toggle}>Descar CV</button>
-      </div>
+        {/* <div style={{ marginTop: '10px' }}> */}
+        <button onClick={toggle} className={styles.btn}>
+          <FaArrowDown /> Descargar CV
+        </button>
+
+        {/* <button className={styles.btn} onClick={toggle}>Descar CV</button> */}
+        {/* </div> */}
 
       </div>
-      
+
       {modal && (
         <div className={styles.modalOverlay} onClick={toggle}>
           <div className={styles.modalBox} onClick={e => e.stopPropagation()}>

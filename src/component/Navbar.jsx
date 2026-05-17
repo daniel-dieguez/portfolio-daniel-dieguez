@@ -65,6 +65,10 @@ export default function Navbar() {
           </NavItem>
 
           <NavItem>
+            <NavLink href="#experiencia" onClick={toggleClose}>Experiencia</NavLink>
+          </NavItem>
+
+          <NavItem>
             <NavLink href="#tecnologias" onClick={toggleClose}>Tecnologías</NavLink>
           </NavItem>
 
@@ -72,9 +76,9 @@ export default function Navbar() {
             <NavLink href="#proyectos" onClick={toggleClose}>Proyectos</NavLink>
           </NavItem>
 
-          <NavItem>
+          {/* <NavItem>
             <NavLink href="#contacto" onClick={toggleClose}>Contacto</NavLink>
-          </NavItem>
+          </NavItem> */}
         </Nav>
       </Collapse>
     </NavbarRS>

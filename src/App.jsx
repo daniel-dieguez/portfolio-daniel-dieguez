@@ -47,7 +47,7 @@ export default function App() {
         <div id="sobreMi" className={style.section}>
           <SobreMi />
         </div>
-        <div id="Experiencia" className={style.section}>
+        <div id="experiencia" className={style.section}>
           <Experience />
         </div>
 
@@ -59,9 +59,9 @@ export default function App() {
           <Proyectos />
         </div>
 
-        <div id="contacto" className={style.section}>
+        {/* <div id="contacto" className={style.section}>
           <Contact />
-        </div>
+        </div> */}
       </main>
 
     </div>
