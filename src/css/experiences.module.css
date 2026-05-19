@@ -1,0 +1,173 @@
+.section {
+  width: 100%;
+  padding: 80px 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+/* WRAPPER */
+.cardWrapper {
+  width: 340px;
+  height: 260px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #000a1f,
+    #071739,
+    #0a1f4d
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    inset 0 0 20px rgba(255,255,255,0.03);
+
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FRONT */
+.front {
+  color: white;
+}
+
+/* TOP BAR */
+.topLine {
+  width: 70px;
+  height: 5px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+/* ROLE */
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+/* COMPANY */
+.company {
+  font-size: 1rem;
+  color: #d0d7e2;
+  margin-bottom: 8px;
+}
+
+/* PERIOD */
+.period {
+  font-size: 0.9rem;
+  color: #93a4c3;
+  font-weight: 500;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  font-size: 0.8rem;
+  color: white;
+
+  backdrop-filter: blur(10px);
+}
+
+/* BACK */
+.back {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.backTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #d8dfeb;
+}
+
+/* HOVER */
+.cardWrapper:hover .card {
+  transform: rotateY(8deg);
+}
+
+.cardWrapper:hover .flipped {
+  transform: rotateY(188deg);
+}
+
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+
+  margin-bottom: 18px;
+
+  border-radius: 18px;
+  padding: 8px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(10px);
+}
+
+.period {
+  color: #9fb0d1;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
