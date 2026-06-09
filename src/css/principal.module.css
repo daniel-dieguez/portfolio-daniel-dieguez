@@ -233,6 +233,18 @@
   color: #e90101;
 }
 
-
+/* Ola dentro del botón */
+@keyframes wave {
+  from { transform: translateX(0) rotate(0deg); }
+  to   { transform: translateX(8%) rotate(360deg); }
+}
+.waterWave {
+  position: absolute;
+  top: -14px; left: -10%;
+  width: 120%; height: 28px;
+  background: rgba(60, 130, 255, 0.22);
+  border-radius: 45%;
+  animation: wave 1.4s linear infinite;
+}
 
 

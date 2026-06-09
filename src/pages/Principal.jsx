@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 // import {} from 'reactstrap'
 // import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa6";
@@ -14,6 +14,46 @@ export default function Principal() {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+
+
+  // ------------
+  const [downloading, setDownloading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [done, setDone] = useState(false);
+  const intervalRef = useRef(null);
+
+  const handleDownload = () => {
+    if (downloading) return;
+    setDownloading(true);
+    setProgress(0);
+    setDone(false);
+
+    // Dispara la descarga real
+    const link = document.createElement('a');
+    link.href = cvEs;
+    link.download = 'DanielDieguezEs.pdf';
+    link.click();
+
+    // Simula el progreso visual
+    intervalRef.current = setInterval(() => {
+      setProgress(prev => {
+        const next = prev + Math.random() * 4 + 1.5;
+        if (next >= 100) {
+          clearInterval(intervalRef.current);
+          setDone(true);
+          setTimeout(() => {
+            toggle();
+            setDownloading(false);
+            setDone(false);
+            setProgress(0);
+          }, 1500);
+          return 100;
+        }
+        return next;
+      });
+    }, 80);
+  };
+
 
 
 
@@ -71,10 +111,42 @@ export default function Principal() {
               Disponible en español. Incluye experiencia, proyectos y tecnologías.
             </p>
 
-            <a href={cvEs} download="DanielDieguezEs.pdf" onClick={toggle}>
+            {/* <a href={cvEs} download="DanielDieguezEs.pdf" onClick={toggle}>
               <button className={styles.modalBtnPrimary}>
                 Descargar PDF
               </button>
+             */}
+            <a href={cvEs} download="DanielDieguezEs.pdf" > 
+            <button
+              className={styles.modalBtnPrimary}
+              onClick={handleDownload}
+              disabled={downloading}
+              style={{ position: 'relative', overflow: 'hidden' }}
+            >
+              {/* Relleno de agua */}
+              {downloading && (
+                <span
+                  style={{
+                    position: 'absolute',
+                    bottom: 0, left: 0,
+                    width: '100%',
+                    height: `${progress}%`,
+                    background: done
+                      ? 'rgba(60, 200, 130, 0.22)'
+                      : 'rgba(60, 130, 255, 0.28)',
+                    transition: 'background 0.4s',
+                    zIndex: 0,
+                  }}
+                />
+              )}
+
+              {/* Texto encima del agua */}
+              <span style={{ position: 'relative', zIndex: 1 }}>
+                {!downloading && 'Descargar PDF'}
+                {downloading && !done && `${Math.round(progress)}%`}
+                {done && '✓ Descargado'}
+              </span>
+            </button>
             </a>
 
             <button className={styles.modalBtnSecondary} onClick={toggle}>
